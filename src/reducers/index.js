@@ -8,7 +8,7 @@ const inCell = 1;
 for (let row = 0; row < Math.pow(sudokuRoot, 2); row++) {
   storeSudokuGrid[row] = [];
   for (let col = 0; col < Math.pow(sudokuRoot, 2); col++) {
-    storeSudokuGrid[row][col] = "ABC";
+    storeSudokuGrid[row][col] = "";
   }
 }
 

@@ -8,14 +8,13 @@ export function MyCell({ digit, row, col, dispatch }) {
             flex: 1, flexDirection: "column", borderStyle: "solid",borderWidth:10,
             justifyContent: "center", borderColor: "#000000"
         }}>
-    <TextInput
+    <TextInput  testID={row+':'+col} value={digit}
                 style={{ flex: 1, fontSize:40,  width: 50, height: 50, justifyContent: "center" }}
                 
-                onChange={data => {
-                    console.log(data.nativeEvent.text)
+                onChangeText={data => {
                     dispatch({
                         type:   "UPDATE_CELL_DIGIT",
-                        digit: data.nativeEvent.text,
+                        digit: data,
                         cellRow: row,
                         cellCol: col
                     })
